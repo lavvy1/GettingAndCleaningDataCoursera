@@ -1,0 +1,79 @@
+## codebook for dataset smarphones_by_subject_and_activity
+#############################################################
+
+Variables
+=========
+subject: Coded as 1 to 30.
+	 Taken from the row concantenation of datasets subject_train and subject_test. 
+
+activity: values: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+	  Taken from dataset activity_labels.txt and merged via variable V1
+	  into concatination of datasets 'test_y' and 'train_y'.
+
+All variables below were taken from train_x and test_x. The variable names were merged
+	  in from dataset 'features'.
+          The meaning of each original variable is described in:
+          http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+	  The original 561 variables were transformed as follows:
+	  - only the variables with 'Mean', 'mean' or 'std' in their original name were kept.
+	       This left 86 variables in the dataset, besides 'subject' and 'activity', which were added later.
+	  - The following strings '-', '(', ')' were deleted from the variable names
+	  - If a name began with 't', the 't' was changed to 'time'.
+	  - If a name began with 'f', the 'f' was changed to 'frequency'
+	  - No other changes were made to the column names, since the length of some of these names is already long.
+     	  - The variables below were created by taking the means of the original variables, grouped by subject and activity.
+               Note that these variables were already the standardized means or standard deviations
+	       of the raw data as described in:
+               http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+
+The variable names are listed below along with their order in the dataset 'smarphone_by_subject_and_activity',
+shown on the left hand side below.
+
+
+ [3] "timeBodyAccmeanX"                     "timeBodyAccmeanY"                    
+ [5] "timeBodyAccmeanZ"                     "timeGravityAccmeanX"                 
+ [7] "timeGravityAccmeanY"                  "timeGravityAccmeanZ"                 
+ [9] "timeBodyAccJerkmeanX"                 "timeBodyAccJerkmeanY"                
+[11] "timeBodyAccJerkmeanZ"                 "timeBodyGyromeanX"                   
+[13] "timeBodyGyromeanY"                    "timeBodyGyromeanZ"                   
+[15] "timeBodyGyroJerkmeanX"                "timeBodyGyroJerkmeanY"               
+[17] "timeBodyGyroJerkmeanZ"                "timeBodyAccMagmean"                  
+[19] "timeGravityAccMagmean"                "timeBodyAccJerkMagmean"              
+[21] "timeBodyGyroMagmean"                  "timeBodyGyroJerkMagmean"             
+[23] "frequencyBodyAccmeanX"                "frequencyBodyAccmeanY"               
+[25] "frequencyBodyAccmeanZ"                "frequencyBodyAccmeanFreqX"           
+[27] "frequencyBodyAccmeanFreqY"            "frequencyBodyAccmeanFreqZ"           
+[29] "frequencyBodyAccJerkmeanX"            "frequencyBodyAccJerkmeanY"           
+[31] "frequencyBodyAccJerkmeanZ"            "frequencyBodyAccJerkmeanFreqX"       
+[33] "frequencyBodyAccJerkmeanFreqY"        "frequencyBodyAccJerkmeanFreqZ"       
+[35] "frequencyBodyGyromeanX"               "frequencyBodyGyromeanY"              
+[37] "frequencyBodyGyromeanZ"               "frequencyBodyGyromeanFreqX"          
+[39] "frequencyBodyGyromeanFreqY"           "frequencyBodyGyromeanFreqZ"          
+[41] "frequencyBodyAccMagmean"              "frequencyBodyAccMagmeanFreq"         
+[43] "frequencyBodyBodyAccJerkMagmean"      "frequencyBodyBodyAccJerkMagmeanFreq" 
+[45] "frequencyBodyBodyGyroMagmean"         "frequencyBodyBodyGyroMagmeanFreq"    
+[47] "frequencyBodyBodyGyroJerkMagmean"     "frequencyBodyBodyGyroJerkMagmeanFreq"
+[49] "angletBodyAccMeangravity"             "angletBodyAccJerkMeangravityMean"    
+[51] "angletBodyGyroMeangravityMean"        "angletBodyGyroJerkMeangravityMean"   
+[53] "angleXgravityMean"                    "angleYgravityMean"                   
+[55] "angleZgravityMean"                    "timeBodyAccstdX"                     
+[57] "timeBodyAccstdY"                      "timeBodyAccstdZ"                     
+[59] "timeGravityAccstdX"                   "timeGravityAccstdY"                  
+[61] "timeGravityAccstdZ"                   "timeBodyAccJerkstdX"                 
+[63] "timeBodyAccJerkstdY"                  "timeBodyAccJerkstdZ"                 
+[65] "timeBodyGyrostdX"                     "timeBodyGyrostdY"                    
+[67] "timeBodyGyrostdZ"                     "timeBodyGyroJerkstdX"                
+[69] "timeBodyGyroJerkstdY"                 "timeBodyGyroJerkstdZ"                
+[71] "timeBodyAccMagstd"                    "timeGravityAccMagstd"                
+[73] "timeBodyAccJerkMagstd"                "timeBodyGyroMagstd"                  
+[75] "timeBodyGyroJerkMagstd"               "frequencyBodyAccstdX"                
+[77] "frequencyBodyAccstdY"                 "frequencyBodyAccstdZ"                
+[79] "frequencyBodyAccJerkstdX"             "frequencyBodyAccJerkstdY"            
+[81] "frequencyBodyAccJerkstdZ"             "frequencyBodyGyrostdX"               
+[83] "frequencyBodyGyrostdY"                "frequencyBodyGyrostdZ"               
+[85] "frequencyBodyAccMagstd"               "frequencyBodyBodyAccJerkMagstd"      
+[87] "frequencyBodyBodyGyroMagstd"          "frequencyBodyBodyGyroJerkMagstd"   
+	
+
